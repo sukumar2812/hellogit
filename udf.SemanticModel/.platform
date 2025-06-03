@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "udf"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "72a2c208-3f27-8914-4a8d-937c72d39ae2"
+  }
+}

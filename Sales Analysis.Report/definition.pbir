@@ -2,7 +2,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Sales Analysis.SemanticModel"
+      "path": "../GA_IRR_PROD/Sales Analysis.SemanticModel"
     }
   }
 }

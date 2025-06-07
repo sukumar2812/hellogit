@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "hellotumi"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "75e04d84-1889-442a-827f-4ecdf13d7636"
+  }
+}

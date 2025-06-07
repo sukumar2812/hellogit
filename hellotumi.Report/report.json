@@ -180,7 +180,7 @@
       "width": 1280.00
     },
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"23D\"}}}}}]}}",
       "displayName": "Page 4",
       "displayOption": 1,
       "filters": "[]",

@@ -640,6 +640,21 @@
             "lineageTag": "c4c56d82-0c9d-45cb-bd4a-d84486cbeb02",
             "sourceColumn": "StartDate",
             "summarizeBy": "none"
+          },
+          {
+            "name": "left2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "LEFT('Product'[Color],2)",
+            "isDataTypeInferred": true,
+            "lineageTag": "919e190e-bb66-4213-ba05-4eb698c68454",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "d878b915-6d80-4338-97bd-20904128beb3",

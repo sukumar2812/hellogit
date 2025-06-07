@@ -1419,6 +1419,44 @@
             }
           }
         ]
+      },
+      {
+        "name": "daxnewtable",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "644399ec23c549ba96299e2c0dddb6aa"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "7720a229-ac88-4b2b-8270-d22ef95502da",
+            "sourceColumn": "Product[Category]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "a36cf4ae-ef3c-44e5-9677-8b0ca12c7197",
+        "partitions": [
+          {
+            "name": "daxnewtable",
+            "mode": "import",
+            "source": {
+              "expression": "DISTINCT('Product'[Category])",
+              "type": "calculated"
+            }
+          }
+        ]
       }
     ]
   }

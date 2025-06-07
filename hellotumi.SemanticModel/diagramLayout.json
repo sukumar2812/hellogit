@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 474.28571428571433,
-        "y": 491.42857142857144
+        "y": 491.4
       },
       "nodes": [
         {
@@ -100,6 +100,18 @@
           },
           "nodeIndex": "Product demo",
           "nodeLineageTag": "7a1bede6-5955-4a63-a364-8e30d8b8311b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1167.45748502994,
+            "y": 491.4
+          },
+          "nodeIndex": "daxnewtable",
           "size": {
             "height": 200,
             "width": 234

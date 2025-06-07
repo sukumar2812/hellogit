@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Sales\",\"Territories\",\"Product\",\"Customer\",\"Calendar\",\"Refresh Time\",\"Product demo\"]"
+        "value": "[\"Sales\",\"Territories\",\"Product\",\"Customer\",\"Calendar\",\"Refresh Time\",\"Product demo\",\"newpqtable\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -78,6 +78,13 @@
         "fromTable": "Product demo",
         "toColumn": "ProductKey",
         "toTable": "Product"
+      },
+      {
+        "name": "AutoDetected_ef1b8012-fa57-428b-95db-c6caec71f111",
+        "fromColumn": "Country",
+        "fromTable": "Territories",
+        "toColumn": "Country",
+        "toTable": "newpqtable"
       }
     ],
     "roles": [
@@ -1454,6 +1461,52 @@
             "source": {
               "expression": "DISTINCT('Product'[Category])",
               "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "newpqtable",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b0f1f965-8a25-445b-b42a-63b33586cd2d",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ff19c243-94c5-4666-ac3a-e8fb77cf279d",
+        "partitions": [
+          {
+            "name": "newpqtable",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Territories,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Country\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
             }
           }
         ]

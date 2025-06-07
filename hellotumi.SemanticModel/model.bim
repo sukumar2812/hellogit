@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Sales\",\"Territories\",\"Product\",\"Customer\",\"Calendar\",\"Refresh Time\",\"Product demo\",\"newpqtable\"]"
+        "value": "[\"Sales\",\"Territories\",\"Product\",\"Customer\",\"Calendar\",\"Refresh Time\",\"Product demo\",\"newpqtable\",\"newpqtable2\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -85,6 +85,13 @@
         "fromTable": "Territories",
         "toColumn": "Country",
         "toTable": "newpqtable"
+      },
+      {
+        "name": "AutoDetected_09b75878-f3e9-4806-909b-d00725eb2470",
+        "fromColumn": "Occupation",
+        "fromTable": "Customer",
+        "toColumn": "Occupation",
+        "toTable": "newpqtable2"
       }
     ],
     "roles": [
@@ -797,7 +804,7 @@
             "formatString": "0",
             "lineageTag": "85130b97-ebfc-4e36-b126-82b3cc62fa19",
             "sourceColumn": "YearlyIncome",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "TotalChildren",
@@ -811,7 +818,7 @@
             "formatString": "0",
             "lineageTag": "933d4d0c-da21-475d-968a-fa42b2c83765",
             "sourceColumn": "TotalChildren",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "NumberChildrenAtHome",
@@ -825,7 +832,7 @@
             "formatString": "0",
             "lineageTag": "b24106c5-bdba-444a-bba1-3c40e405835f",
             "sourceColumn": "NumberChildrenAtHome",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "Education",
@@ -865,7 +872,7 @@
             "formatString": "0",
             "lineageTag": "b8d5dae0-ca6b-425d-8ab6-4b59cf37b6d2",
             "sourceColumn": "HouseOwnerFlag",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "NumberCarsOwned",
@@ -879,7 +886,7 @@
             "formatString": "0",
             "lineageTag": "d670c998-ce49-47d8-a1b3-55b6101ad8ea",
             "sourceColumn": "NumberCarsOwned",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "AddressLine1",
@@ -1502,6 +1509,52 @@
                 "let",
                 "    Source = Territories,",
                 "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Country\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "newpqtable2",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Occupation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "faf95983-7c67-4e57-a03e-48bed1ae0c5d",
+            "sourceColumn": "Occupation",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1a610da6-65b9-4ce2-af07-c09a593bbe09",
+        "partitions": [
+          {
+            "name": "newpqtable2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Customer,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Occupation\"}),",
                 "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
                 "in",
                 "    #\"Removed Duplicates\""

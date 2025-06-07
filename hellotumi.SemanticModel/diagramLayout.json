@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 474.28571428571433,
-        "y": 491.4
+        "y": 491.42857142857144
       },
       "nodes": [
         {
@@ -125,6 +125,19 @@
           },
           "nodeIndex": "newpqtable",
           "nodeLineageTag": "ff19c243-94c5-4666-ac3a-e8fb77cf279d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1167.45748502994,
+            "y": 539.4
+          },
+          "nodeIndex": "newpqtable2",
+          "nodeLineageTag": "1a610da6-65b9-4ce2-af07-c09a593bbe09",
           "size": {
             "height": 104,
             "width": 234
